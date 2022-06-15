@@ -48,4 +48,5 @@ jobs:
         env:
           USER_NAME: ${{ secrets.USER_NAME }}
           GITHUB_TOKEN: ${{ secrets.TOKEN_GITHUB }}
-        run: mvn deploy -DuniqueVersion=false -Dmaven.source.useDefaultManifestFile=true -Dmaven.source.includePom=true -DaltDeploymentRepository='github::default::https://maven.pkg.github.com/juandiaz9102/libreria-mvn'
+        #run: mvn deploy -DuniqueVersion=false -Dmaven.source.useDefaultManifestFile=true -Dmaven.source.includePom=true -DaltDeploymentRepository='github::default::https://maven.pkg.github.com/juandiaz9102/libreria-mvn'
+        run: mvn deploy --settings settings.xml -DuniqueVersion=false -Dmaven.source.useDefaultManifestFile=true -Dmaven.source.includePom=true -DaltDeploymentRepository='github::default::https://maven.pkg.github.com/organizacionkelly/ffm-fc-back-jv-mse-serviceordermgmt'
